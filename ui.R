@@ -45,10 +45,28 @@ fluidPage(
                 
                 # Show word cloud
                 mainPanel(
-                        h4("Word Cloud Output:"),
-                        h5("**Upload file to see output or input your own text to see output"),
-                        h6("**Ignore any initial error message (due to no files or text being uploaded)"),
-                        plotOutput("wc", width = "600px", height = "600px")
+                        tabsetPanel(
+                                tabPanel(
+                                        title = "Word Cloud",
+                                        h4("Word Cloud Output:"),
+                                        h5("**Upload file to see output or input your own text to see output"),
+                                        h6("**Ignore any initial error message (due to no files or text being uploaded)"),
+                                        plotOutput("wc", width = "600px", height = "600px")
+                                ),
+                                tabPanel(
+                                        title = "About this app",
+                                        br(),
+                                        br(),
+                                        HTML("<ul><li>There are 2 ways to ways to use this word generator app.</ul></li>
+                                             <ul><li><em>1. Type in your own text that you want to analyse into the input text box.</em></ul></li>
+                                             <ul><li><em>2. Upload a text file with text sentences you want to analyse.</em></ul></li>
+                                             <ul><li>When uploading a file, make sure to upload a .txt file</ul></li>
+                                             <ul><li>Ignore any initial error message (due to no files or text being uploaded</ul></li>
+                                             <ul><li>Upload file to see output or input your own text to see outputd</ul></li>")
+                                        
+                                )
+                                        
+                        )
                 )
         )
 )
