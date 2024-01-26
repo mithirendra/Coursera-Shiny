@@ -1,0 +1,95 @@
+---
+title: "Word Cloud Generator Shiny Application"
+author: "MM"
+date: "2024-01-25"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## 1. Word Cloud Generator Introduction
+
+This is a proposal for a Word Cloud Generator application, built using Shiny in Rstudio. 
+
+- The purpose of this application is to take a text file or text input to generate a Word Cloud.
+- It shows the most common words that are in the file or text input.
+- The size of each word indicates its frequency or importance.  
+
+```{r image1}
+# Define variable containing url
+url1 <- "https://res.cloudinary.com/dmeglmbmj/image/upload/v1706250899/WordCloud1_g93fph.png"
+```
+
+<center><img src="`r url1`" width="1000" /></center>  
+
+
+## 2. Word Cloud Generator Input
+
+```{r image2}
+# Define variable containing url
+url2 <- "https://res.cloudinary.com/dmeglmbmj/image/upload/v1706251336/Wordcloud2_e9ok5o.png"
+```
+
+There are 2 ways that text can be input into the Word Cloud Generator
+
+- First - Choose to type in your own text
+- Second - Upload a file with text
+<br>
+<br>
+<center><img src="`r url2`" width="1200" /></center>  
+<br>
+
+
+## 3. Word Cloud Generator Output
+
+The Word Cloud output will be auto generated in the main panel.
+
+- Default Text will be shown in case no text or file has been uploaded.
+
+```{r image3}
+url3 <- "https://res.cloudinary.com/dmeglmbmj/image/upload/v1706251945/Wordcloud3_cdyiuw.png"
+```
+
+<center><img src="`r url3`" width="1200" /></center>  
+
+
+## 4. Actual Output Generated from text
+
+An example of a word cloud generated is shown below.
+
+```{r image4, warning = FALSE, results='hide'}
+library(wordcloud)
+library(tm)
+library(RColorBrewer)
+library(NLP)
+text <- "Simi prayed to the gods, once. Now she serves them as Mami Wata—a mermaid—collecting the souls of those who die at sea and blessing their journeys back home. But when a living boy is thrown overboard, Simi does the unthinkable—she saves his life, going against an ancient decree. And punishment awaits those who dare to defy it. In Natasha Bowen’s Skin of the Sea, danger lurks at every turn, and Simi must brave vengeful gods, treacherous lands, and legendary creatures to protect the fate of the world.
+
+Icircle the ship with the sharks, slipping between dark waves. The water is layered with cold currents, sea creatures, and a ship that slices through it with cargo holds full of stolen people. I swim underneath the swells, away from the gaze of men and just out of the reach of jaws.
+
+Waiting.
+
+The hull of the vessel is a shadow above me, and as I follow the line of the keel, my chest tightens, hot rage building against my rib cage. I spin away as fish flit around me, stretching my fingers up toward watery sunbeams. It has been weeks since I have felt the burn of a midday sun. I miss basking in its light, letting the heat soak into my bones. Closing my eyes, I reach for a memory that twists and coils like smoke. I’m sitting on red-brown earth under the dappled shade of a mahogany tree, splashes of sun on my hot skin. Eagerly, I grasp for more, but as usual, the vision fades.
+
+My stomach churns with disappointment as sharp as red coral. Every time, the loss feels the same, as if a part of me is within reach, only to dissolve like mist on the tops of the waves."
+
+# wordcloud(text, max.words = 1000,colors=brewer.pal(8, "Dark2"))
+
+url4 <- "https://res.cloudinary.com/dmeglmbmj/image/upload/v1706249123/WordCloud_ar3hfx.png"
+```
+
+<center><img src="`r url4`" width="800" /></center>  
+
+
+## 5. Summary and Conclusion
+```{r image5}
+# Define variable containing url
+url5 <- "https://res.cloudinary.com/dmeglmbmj/image/upload/v1704600076/thank-you_pdhhea.jpg"
+```
+
+- The word cloud generator is very useful as a data product for text analysis.
+- It can be used with large amount of text to find words with the highest frequency or importance. 
+
+<center><img src="`r url5`" width="500" /></center>  
