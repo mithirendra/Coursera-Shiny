@@ -83,13 +83,24 @@ url4 <- "https://res.cloudinary.com/dmeglmbmj/image/upload/v1706249123/WordCloud
 <center><img src="`r url4`" width="800" /></center>  
 
 
-## 5. Summary and Conclusion
+## 5. Help / "About this app" documentation tab
+
+An "About this app" tab is available to give more documentation and to help users on how to use this app.
+
 ```{r image5}
+url5 <- "https://res.cloudinary.com/dmeglmbmj/image/upload/v1706255457/Wordcloud4_cq3b7v.png"
+```
+
+<center><img src="`r url5`" width="1200" /></center>  
+
+
+## 6. Summary and Conclusion
+```{r image6}
 # Define variable containing url
-url5 <- "https://res.cloudinary.com/dmeglmbmj/image/upload/v1704600076/thank-you_pdhhea.jpg"
+url6 <- "https://res.cloudinary.com/dmeglmbmj/image/upload/v1704600076/thank-you_pdhhea.jpg"
 ```
 
 - The word cloud generator is very useful as a data product for text analysis.
 - It can be used with large amount of text to find words with the highest frequency or importance. 
 
-<center><img src="`r url5`" width="500" /></center>  
+<center><img src="`r url6`" width="500" /></center>  
